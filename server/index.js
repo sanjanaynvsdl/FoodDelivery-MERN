@@ -12,7 +12,7 @@ const app = express();
 // }));
 
 app.use(cors({
-  origin: 'https://food-delivery-mern-jet.vercel.app',
+  origin: ['https://food-delivery-mern-jet.vercel.app','https://food-delivery-mern-jet.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
