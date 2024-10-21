@@ -7,9 +7,16 @@ import FoodRoutes from "./routes/Food.js";
 dotenv.config();
 
 const app = express();
+// app.use(cors({
+//   origin : "https://food-delivery-mern-jet.vercel.app"
+// }));
+
 app.use(cors({
-  origin : "https://food-delivery-mern-jet.vercel.app"
+  origin: 'https://food-delivery-mern-jet.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
+
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true })); // for form data
